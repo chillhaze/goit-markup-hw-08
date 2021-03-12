@@ -26,6 +26,9 @@
   --transiton-duration-time: 250ms;
 }
 
+/* -----Breakpoints----- */
+/* -----Mixins----- */
+/* -----Placeholders----- */
 .social__link, .social__icon, .link, .clients-list__item, .clients-list__icon, .btn-filter, .portfolio-list__link, .thumb__descr--text, .portfolio-list__link:hover .thumb__descr--text,
 .portfolio-list__link:focus .thumb__descr--text, .backdrop, .backdrop__is-hidden, .close-icon, .modal-form__input, .modal-form__comment, .input-icon, .checkbox-icon, .btn-form {
   transition-duration: var(--transiton-duration-time);
