@@ -46,6 +46,10 @@
 
   pointer-events: auto;
 
+  @media screen and (max-width: 479px) {
+    min-width: 95%;
+  }
+
   @media screen and (min-width: $desktop) {
     max-width: 528px;
   }

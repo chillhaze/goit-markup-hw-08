@@ -1116,6 +1116,12 @@ body {
   pointer-events: auto;
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    min-width: 95%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
