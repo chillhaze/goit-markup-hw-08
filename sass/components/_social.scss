@@ -2,10 +2,15 @@
 .social {
   margin-top: 16px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 
   &--footer {
     margin-top: 20px;
+
+    
+    @media screen and (min-width: $desktop) {
+      justify-content: space-around;
+    }
   }
 }
 
@@ -55,7 +60,18 @@
 
 /* -----Footer Social Styles----- */
 .footer-social {
-  margin-left: 86px;
+  margin-top: 60px;
+
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 5px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 86px;
+
+    text-align: unset;
+  }
 }
 
 .footer-social__title {

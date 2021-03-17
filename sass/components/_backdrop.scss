@@ -32,7 +32,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  max-width: 528px;
+  width: 95%;
   max-height: 100vh;
   padding: 40px;
 
@@ -45,6 +45,13 @@
   overflow-y: auto;
 
   pointer-events: auto;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 528px;
+  }
 }
 
 .modal-content__title {
@@ -84,6 +91,7 @@
   transition-property: fill, transform;
   @extend %transitDurTiming;
 
+  .btn-close:active &,
   .btn-close:hover &,
   .btn-close:focus & {
     fill: var(--accent-color);

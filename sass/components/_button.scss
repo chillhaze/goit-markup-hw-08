@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 
-/* -----Wellcome (backdrop open) button----- */
+/* -----Welcome (backdrop open) button----- */
 .btn-order {
   margin: 30px 0 0;
   padding-left: 32px;
@@ -34,9 +34,12 @@
 .btn-subscribe {
   display: inline-block;
   align-items: center;
-  margin-left: 12px;
 
   padding: 10px 29px;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 12px;
+  }
 }
 
 .subscribe-icon {
@@ -44,4 +47,41 @@
   vertical-align: middle;
 
   fill: var(--font-color-white);
+}
+
+/* -----Mobile menu buttons----- */
+.menu-container .btn-menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.btn-menu {
+  height: 40px;
+  width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  transition-property: fill;
+  @extend %transitDurTiming;
+
+  @media (min-width: $tablet) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.btn-menu:hover,
+.btn-menu:focus {
+  fill: var(--accent-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
 }

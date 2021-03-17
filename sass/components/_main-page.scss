@@ -21,47 +21,76 @@
 
 .welcome__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.615;
 
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   color: var(--font-color-white);
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 /* -----Advantages styles----- */
 .advantages {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
 }
 
 .advantages__list {
-  display: flex;
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .advantages__item {
-  max-width: 270px;
-
-  &:not(:first-child) {
-    margin-left: var(--item-set-gap);
+  @media screen and (min-width: $tablet) {
+    max-width: 354px;
   }
 
-  &--title {
-    margin-top: 30px;
-  
-    font-weight: 700;
-    line-height: 1.172;
-    text-transform: uppercase;
-  
-    text-align: left;
-  }
-  
-  &--text {
-    margin-top: 10px;
-    line-height: 1.714;
-    color: var(--font-color-secondary);
+  @media screen and (min-width: $desktop) {
+    max-width: 270px;
+
+    &:not(:first-child) {
+      margin-left: var(--item-set-gap);
+    }
   }
 }
+
+.advantages__item--title {
+  margin-top: 30px;
+
+  font-weight: 700;
+  line-height: 1.172;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: center;
+  }
+}
+
+.advantages__item--text {
+  margin-top: 10px;
+  line-height: 1.714;
+  color: var(--font-color-secondary);
+} 
 
 .advantages__wrapper {
   height: 120px;
@@ -75,7 +104,11 @@
 
 /* -----Visuals styles----- */
 .visuals {
-  padding-bottom: 94px;
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 94px;
+  }
 }
 
 .visuals__title {
@@ -125,30 +158,45 @@
 .team {
   background-color: var(--bg-color-secondary);
 
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
 }
 
 .team__title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.03em;
 
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+  }
 }
 
 .team-mate {
-  margin-top: 50px;
+  margin-top: 30px;
 
   display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--item-set-gap));
+  flex-direction: column;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin-top: 50px;
+    margin-left: calc(-1 * var(--item-set-gap));
+  }
 }
 
 .team-mate__card {
-  flex-basis: calc(100% / 4 - var(--item-set-gap));
-  margin-left: var(--item-set-gap);
-  max-width: 270px;
+  margin-bottom: var(--item-set-gap);
+  max-width: 100%;
 
   text-align: center;
   font-size: 16px;
@@ -158,6 +206,33 @@
 
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--team-mate-box-shadow);
+
+  & img {
+    width: 450px;
+    height: 460px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - var(--item-set-gap));
+    margin-left: var(--item-set-gap);
+    max-width: 354px;
+
+    & img {
+      width: 270px;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 4 - var(--item-set-gap));
+    margin-left: var(--item-set-gap);
+    max-width: 270px;
+
+    & img {
+      width: 270px;
+      height: auto;
+    }
+  }
 }
 
 .team-mate__meta {
@@ -175,7 +250,11 @@
 
 /* -----Clients styles----- */
 .clients {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
 }
 
 .clients__title {
@@ -191,11 +270,23 @@
   margin-top: 50px;
 
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media screen and (min-width: $desktop) {
+    justify-content: unset;
+  }
+
+  @media screen and (max-width: 450px) {
+    justify-content: center;
+  }
 }
 
 .clients-list__item {
-  width: 170px;
+  width: 210px;
   height: 90px;
+
+  margin-bottom: 30px;
 
   @include flexCenter;
 
@@ -205,10 +296,6 @@
   transition-property: border;
   @extend %transitDurTiming;
 
-  &:not(:first-child) {
-    margin-left: 30px;
-  }
-
   &:focus,
   &:hover {
     border: 1px solid var(--accent-color);
@@ -216,6 +303,16 @@
     fill: var(--accent-color);
 
     cursor: pointer;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 170px;
+
+    margin-bottom: 0px;
+
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
   }
 }
 

@@ -106,11 +106,15 @@
 .checkbox__label {
   @include flexCenter;
 
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.714;
   letter-spacing: 0.03em;
 
   cursor: pointer;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .checkbox-icon {
@@ -166,7 +170,18 @@
 
 /* -----Footer form----- */
 .footer-form {
-  margin-left: auto;
+  margin-top: 60px;
+
+
+  text-align: center;
+
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-left: auto;
+
+    text-align: unset;
+  }
 }
 
 .footer-form__title {
@@ -178,14 +193,19 @@
 }
 
 .footer-form__label {
-  display: inline-block;
+  display: block;
   margin-top: 20px;
+
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+  }
 }
 
 .modal__form-input--footer {
   height: 50px;
-  min-width: 358px;
-
+  min-width: 100%;
+  
+  margin-bottom: 20px;
   padding: 15px 16px;
 
   background-color: transparent;
@@ -193,4 +213,13 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: var(--placeholder-color);
+
+  @media screen and (min-width: $tablet) {
+    min-width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 358px;
+    margin-bottom: 0;
+  }
 }

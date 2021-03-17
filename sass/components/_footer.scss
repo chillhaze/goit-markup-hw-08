@@ -4,6 +4,14 @@
   background-color: var(--bg-color-dark);
 }
 
+.footer-info {
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    text-align: unset;
+  }
+}
+
 .footer-info__address {
   display: flex;
   flex-direction: column;
