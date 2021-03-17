@@ -29,7 +29,7 @@
 /* -----Breakpoints----- */
 /* -----Mixins----- */
 /* -----Placeholders----- */
-.btn-menu, .social__link, .social__icon, .link, .clients-list__item, .clients-list__icon, .btn-filter, .portfolio-list__link, .thumb__descr--text, .portfolio-list__link:hover .thumb__descr--text,
+.btn-menu, .close-icon--mobile, .social__link, .social__icon, .link, .clients-list__item, .clients-list__icon, .btn-filter, .portfolio-list__link, .thumb__descr--text, .portfolio-list__link:hover .thumb__descr--text,
 .portfolio-list__link:focus .thumb__descr--text, .backdrop, .backdrop__is-hidden, .close-icon, .modal-form__input, .modal-form__comment, .input-icon, .checkbox-icon, .btn-form {
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-fn);
@@ -234,6 +234,15 @@ body {
 .btn-menu:focus {
   fill: var(--accent-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.close-icon--mobile {
+  transform: rotate(0deg);
+  transition-property: fill, transform;
+}
+
+.close-icon--mobile:hover, .close-icon--mobile:focus {
+  transform: rotate(90deg);
 }
 
 /* -----Social styles----- */
@@ -935,6 +944,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .portfolio-list__item {
+    display: flex;
     flex-basis: calc(100% / 2 - var(--item-set-gap));
     margin-left: var(--item-set-gap);
     margin-top: var(--item-set-gap);
@@ -943,6 +953,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .portfolio-list__item {
+    display: block;
     flex-basis: calc(100% / 3 - var(--item-set-gap));
   }
 }
@@ -971,10 +982,29 @@ body {
   box-shadow: var(--card-box-shadow);
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio-list__link {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-list__link {
+    display: block;
+  }
+}
+
 .text-wrapper {
   padding: 20px 24px;
   border: 1px solid var(--border-color);
   border-top: none;
+}
+
+@media screen and (min-width: 768px) {
+  .text-wrapper {
+    height: 100%;
+  }
 }
 
 .thumb {

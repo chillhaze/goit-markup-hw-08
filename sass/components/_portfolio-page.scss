@@ -86,6 +86,7 @@
   }
 
   @media screen and (min-width: $tablet) {
+    display: flex;
     flex-basis: calc(100% / 2 - var(--item-set-gap));
 
     margin-left: var(--item-set-gap);
@@ -93,6 +94,7 @@
   }
   
   @media screen and (min-width: $desktop) {
+    display: block;
     flex-basis: calc(100% / 3 - var(--item-set-gap));
   }
 
@@ -126,12 +128,25 @@
   &:hover {
     box-shadow: var(--card-box-shadow);
   }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
 }
 
 .text-wrapper {
   padding: 20px 24px;
   border: 1px solid var(--border-color);
   border-top: none;
+
+  @media screen and (min-width: $tablet) {
+    height: 100%;
+  }
 }
 
 .thumb {
