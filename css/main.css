@@ -1076,7 +1076,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 95%;
+  width: 450px;
   max-height: 100vh;
   padding: 40px;
   background-color: var(--bg-color-main);
@@ -1084,12 +1084,6 @@ body {
   border-radius: 4px;
   overflow-y: auto;
   pointer-events: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .modal {
-    max-width: 450px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
