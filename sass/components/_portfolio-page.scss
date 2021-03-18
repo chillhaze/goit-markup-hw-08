@@ -145,7 +145,7 @@
   border-top: none;
 
   @media screen and (min-width: $tablet) {
-    height: 100%;
+    flex-grow: 1;
   }
 }
 
