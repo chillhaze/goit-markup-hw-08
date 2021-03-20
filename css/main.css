@@ -565,12 +565,6 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .advantages__item--title {
-    text-align: center;
-  }
-}
-
 .advantages__item--text {
   margin-top: 10px;
   line-height: 1.714;
@@ -1388,9 +1382,21 @@ body {
   margin-top: 64px;
 }
 
+@media screen and (max-width: 400px) {
+  .mobile-social {
+    flex-wrap: wrap;
+  }
+}
+
 .mobile-social__item {
   margin-right: 20px;
   position: relative;
+}
+
+@media screen and (max-width: 400px) {
+  .mobile-social__item {
+    margin-bottom: 10px;
+  }
 }
 
 .mobile-social__item--line:after {
