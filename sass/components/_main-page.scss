@@ -100,12 +100,15 @@
 }
 
 .advantages__item {
+  margin-bottom: 30px;
+
   @media screen and (min-width: $tablet) {
     max-width: 354px;
   }
 
   @media screen and (min-width: $desktop) {
     max-width: 270px;
+    margin-bottom: 0;
 
     &:not(:first-child) {
       margin-left: var(--item-set-gap);
